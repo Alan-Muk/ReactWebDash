@@ -1,5 +1,5 @@
 # ReactWebDash
-# ✈️ Airport Dashboard
+# Airport Dashboard
 
 A modern React dashboard built with:
 
