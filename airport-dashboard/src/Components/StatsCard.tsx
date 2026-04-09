@@ -1,37 +1,72 @@
-import airports from "./Data/airports.json";
+import airportsData from "./Data/airports.json";
+import StatCard from "../Components/UI/StatCard";
+
+type Airport = {
+  id?: number | string;
+  name: string;
+  city: string;
+  country: string;
+  iata?: string;
+  icao?: string;
+  latitude?: number;
+  longitude?: number;
+};
+
+type AirportsData = {
+  airports: Airport[];
+};
+
+const airports = airportsData as AirportsData;
 
 export default function StatsCards() {
-  const total = airports.airports.length;
+  const totalAirports = airports.airports.length;
 
-  const countryCount = airports.airports.reduce((acc: any, a) => {
-    acc[a.country] = (acc[a.country] || 0) + 1;
-    return acc;
-  }, {});
+  const countryCount = airports.airports.reduce<Record<string, number>>(
+    (acc, airport) => {
+      acc[airport.country] = (acc[airport.country] || 0) + 1;
+      return acc;
+    },
+    {}
+  );
 
-  const topCountry = Object.entries(countryCount).sort(
-    (a: any, b: any) => b[1] - a[1]
-  )[0];
+  const totalCountries = Object.keys(countryCount).length;
+
+  const topCountryEntry =
+    Object.entries(countryCount).sort((a, b) => b[1] - a[1])[0] ?? [
+      "N/A",
+      0,
+    ];
+
+  const [topCountry, topCountryTotal] = topCountryEntry;
+
+  const avgAirportsPerCountry =
+    totalCountries > 0 ? (totalAirports / totalCountries).toFixed(1) : "0";
 
   return (
-    <div className="grid grid-cols-3 gap-4 mb-6">
-      <div className="p-4 bg-white shadow rounded">
-        <h2 className="text-gray-500">Total Airports</h2>
-        <p className="text-2xl font-bold">{total}</p>
-      </div>
+    <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
+      <StatCard
+        title="Total Airports"
+        value={totalAirports}
+        subtitle="Tracked across the current dataset"
+      />
 
-      <div className="p-4 bg-white shadow rounded">
-        <h2 className="text-gray-500">Countries</h2>
-        <p className="text-2xl font-bold">
-          {Object.keys(countryCount).length}
-        </p>
-      </div>
+      <StatCard
+        title="Countries"
+        value={totalCountries}
+        subtitle="Geographic coverage in dashboard records"
+      />
 
-      <div className="p-4 bg-white shadow rounded">
-        <h2 className="text-gray-500">Top Country</h2>
-        <p className="text-2xl font-bold">
-          {topCountry[0]} ({topCountry[1]})
-        </p>
-      </div>
+      <StatCard
+        title="Top Country"
+        value={topCountry}
+        subtitle={`${topCountryTotal} airports represented`}
+      />
+
+      <StatCard
+        title="Avg Coverage"
+        value={avgAirportsPerCountry}
+        subtitle="Average airports per country"
+      />
     </div>
   );
 }
