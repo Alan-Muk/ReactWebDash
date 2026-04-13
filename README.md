@@ -1,11 +1,9 @@
 
-#  Airport Dashboard
+  Airport Dashboard
 
-A modern, interactive **React + Tailwind CSS dashboard** for monitoring global airport data, analytics, and geospatial activity. Built with **React**, **Recharts**, and **React Leaflet**, this dashboard provides a real-time view of airports, traffic analytics, and operations metrics in a polished, professional layout.
 
 ---
-
-## Features
+ Features
 
 - **Overview Stats**
   - Total airports tracked
