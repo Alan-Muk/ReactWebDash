@@ -131,3 +131,64 @@ export default function MapView() {
     </div>
   );
 }
+
+/*
+========================================
+MAPVIEW COMPONENT OVERVIEW
+========================================
+
+This component displays an interactive global
+airport map using React Leaflet.
+
+Main Features:
+- Renders airports on an interactive world map
+- Displays airport markers with popup details
+- Shows airport statistics and geographic coverage
+- Uses OpenStreetMap tiles for map rendering
+
+Data Source:
+- Imports airport data from airports.json
+- Uses TypeScript interfaces for type safety
+
+Core Functionality:
+1. Filters valid airport coordinates
+   → Ensures latitude and longitude are usable
+
+2. Limits displayed airports
+   → Improves map performance
+   → Reduces visual clutter
+
+3. Calculates unique countries
+   → Tracks geographic coverage
+
+Map Features:
+- Interactive Leaflet map
+- Zoom and pan support
+- Custom airport markers
+- Popup information for each airport
+
+Popup Information:
+- Airport name
+- City and country
+- Airport code
+
+Leaflet Configuration:
+- Custom marker icon setup
+- OpenStreetMap tile layer
+- Fixed marker compatibility for Vite + React
+
+UI Sections:
+1. Map header and description
+2. Airport statistics cards
+3. Interactive global map
+
+Performance Optimization:
+- Displays only first 120 airports
+- Prevents excessive marker rendering
+
+Styling:
+- Tailwind CSS dark-themed dashboard design
+- Responsive layout for mobile and desktop
+
+========================================
+*/
