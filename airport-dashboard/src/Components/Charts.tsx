@@ -153,3 +153,72 @@ export default function Charts() {
     </div>
   );
 }
+
+/*
+========================================
+CHARTS COMPONENT OVERVIEW
+========================================
+
+This component visualizes airport distribution
+by country using a responsive bar chart.
+
+Main Features:
+- Displays top countries by airport count
+- Uses Recharts for data visualization
+- Includes interactive tooltips
+- Shows analytics summary statistics
+
+Data Source:
+- Imports airport data from airports.json
+- Uses TypeScript types for data safety
+
+Core Functionality:
+1. Counts airports per country
+   → Uses reduce() for aggregation
+
+2. Formats chart data
+   → Converts object data into chart-friendly format
+
+3. Sorts countries by airport count
+   → Displays highest values first
+
+4. Limits displayed results
+   → Shows top 8 countries only
+
+Statistics Displayed:
+- Number of countries shown
+- Total airports included
+- Country with highest airport concentration
+
+Chart Features:
+- ResponsiveContainer for adaptive sizing
+- BarChart visualization
+- Custom tooltip component
+- Styled axes and grid lines
+- Rounded bar styling
+
+Custom Tooltip:
+- Displays country name
+- Shows airport count on hover
+- Styled with dashboard theme
+
+Libraries Used:
+- Recharts for chart rendering
+- Tailwind CSS for styling
+
+UI Structure:
+1. Analytics header section
+2. Dashboard summary cards
+3. Interactive bar chart
+
+Performance Optimization:
+- Limits chart data to top 8 countries
+- Lightweight rendering for responsiveness
+
+Styling:
+- Dark dashboard theme
+- Responsive grid layout
+- Consistent visual design with dashboard UI
+
+========================================
+*/
