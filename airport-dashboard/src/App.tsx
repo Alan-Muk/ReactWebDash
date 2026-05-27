@@ -46,3 +46,42 @@ export default function App() {
     </div>
   );
 }
+
+/*
+========================================
+APP COMPONENT OVERVIEW
+========================================
+
+This component serves as the main dashboard layout
+for the airport analytics application.
+
+Main Features:
+- Sidebar navigation menu
+- Dashboard header section
+- Statistics summary cards
+- Traffic analytics charts
+- Airport activity map
+- Recent flight records table
+
+Layout Structure:
+1. Sidebar positioned on the left
+2. Main content area on the right
+3. Responsive grid layout for charts and maps
+4. Reusable SectionCard components for organization
+
+Styling:
+- Built using Tailwind CSS
+- Dark theme with slate background
+- Responsive spacing and grid system
+
+Imported Components:
+- Sidebar → Navigation panel
+- DashboardHeader → Top dashboard header
+- StatsCards → Displays key statistics
+- Charts → Traffic analytics visualizations
+- MapView → Airport activity map
+- AirportTable → Flight records table
+- SectionCard → Reusable content wrapper
+
+========================================
+*/
