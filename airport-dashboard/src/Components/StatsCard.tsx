@@ -70,3 +70,48 @@ export default function StatsCards() {
     </div>
   );
 }
+
+/*
+========================================
+STATSCARDS COMPONENT OVERVIEW
+========================================
+
+This component generates and displays dashboard
+statistics related to airport data.
+
+Main Features:
+- Calculates total number of airports
+- Counts unique countries in the dataset
+- Identifies the country with the most airports
+- Computes average airport coverage per country
+
+Data Source:
+- Imports airport information from airports.json
+- Uses TypeScript types for data validation
+
+Calculated Metrics:
+1. Total Airports
+   → Total airport records available
+
+2. Countries
+   → Number of unique countries represented
+
+3. Top Country
+   → Country containing the highest number of airports
+
+4. Avg Coverage
+   → Average airports per country
+
+Logic Used:
+- reduce() → Counts airports by country
+- Object.keys() → Calculates unique country count
+- sort() → Finds the top represented country
+- toFixed(1) → Formats average value
+
+UI Structure:
+- Responsive grid layout
+- Uses reusable StatCard components
+- Optimized for dashboard visualization
+
+========================================
+*/
