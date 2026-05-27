@@ -143,3 +143,73 @@ export default function AirportTable() {
     </div>
   );
 }
+
+/*
+========================================
+AIRPORTTABLE COMPONENT OVERVIEW
+========================================
+
+This component displays searchable airport
+records in a responsive data table.
+
+Main Features:
+- Displays airport information in table format
+- Supports real-time search filtering
+- Shows operational status badges
+- Responsive and scrollable table layout
+
+Data Source:
+- Imports airport data from airports.json
+- Uses TypeScript interfaces for type safety
+
+Core Functionality:
+1. Search Filtering
+   → Filters airports by:
+      - Airport code
+      - Airport name
+      - City
+      - Country
+
+2. Operational Status Generation
+   → Dynamically assigns airport status values:
+      - Operational
+      - Busy
+      - Monitoring
+      - Delayed
+
+3. Status Styling
+   → Applies color-coded badge styles
+   → Uses Tailwind utility classes
+
+React Hooks Used:
+- useState()
+  → Stores current search input
+
+- useMemo()
+  → Optimizes filtering performance
+  → Prevents unnecessary recalculations
+
+Table Structure:
+- Airport Code
+- Airport Name
+- City
+- Country
+- Operational Status
+
+UI Features:
+- Search input field
+- Hover row effects
+- Empty-state message
+- Responsive overflow scrolling
+
+Performance Optimization:
+- Memoized filtering logic with useMemo()
+- Efficient search rendering
+
+Styling:
+- Tailwind CSS dark dashboard theme
+- Responsive design for mobile and desktop
+- Styled status badges with dynamic colors
+
+========================================
+*/
