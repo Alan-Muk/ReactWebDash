@@ -1,4 +1,4 @@
-import airportsData from "./Data/airports.json";
+import airportsData from "./data/airports.json";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
