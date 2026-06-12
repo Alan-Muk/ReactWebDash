@@ -1,4 +1,4 @@
-import airportsData from "./Data/airports.json";
+import airportsData from "./data/airports.json";
 import {
   ResponsiveContainer,
   BarChart,
