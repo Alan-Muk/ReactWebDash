@@ -1,5 +1,5 @@
-import airportsData from "./Data/airports.json";
-import StatCard from "../Components/UI/StatCard";
+import airportsData from "./data/airports.json";
+import StatCard from "../domponents/UI/StatCard";
 
 type Airport = {
   id?: number | string;
