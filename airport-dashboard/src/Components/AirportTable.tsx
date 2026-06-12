@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import airportsData from "./Data/airports.json";
+import airportsData from "./data/airports.json";
 
 type Airport = {
   code: string;
