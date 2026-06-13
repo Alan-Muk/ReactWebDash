@@ -33,7 +33,7 @@
 
 ---
 
-## 🛠 Tech Stack
+#Tech Stack
 
 - **React 18** with **Vite**  
 - **TypeScript** for type safety  
@@ -55,13 +55,13 @@ src/
       SectionCard.tsx
     ui/
       StatCard.tsx
-  Components/
+  components/
     StatsCards.tsx
     AirportTable.tsx
     Charts.tsx
     MapView.tsx
-  Data/
+  data/
     airports.json
-  App.tsx
+  app.tsx
   main.tsx
   index.css
