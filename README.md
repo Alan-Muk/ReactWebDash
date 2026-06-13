@@ -55,7 +55,7 @@ src/
       SectionCard.tsx
     ui/
       StatCard.tsx
-  components/
+  features/
     StatsCards.tsx
     AirportTable.tsx
     Charts.tsx
